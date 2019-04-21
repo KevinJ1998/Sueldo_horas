@@ -6,7 +6,15 @@
 <body>
     <script>
     let hordia,numdias=1,hortotal,nombre,sueldo;
-    
+    nombre=prompt("Ingrese el nombre del empleado: ");
+    sueldo=prompt("Ingrese el sueldo de "+nombre+" por hora: ");
+    while (numdias<=5) {
+        hordia=prompt("Ingrese el # de horas trabajadas el dia "+numdias+": ");
+        numdias++;
+        hortotal=hordia+hortotal;
+    }
+    document.write("Horas trabajadas en la semana: "+hortotal+"\n");
+    document.write("Sueldo pagado a "+nombre+" en la semana: "+(sueldo*hortotal));
     
     </script> 
 </body>
