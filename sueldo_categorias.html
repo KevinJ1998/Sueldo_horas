@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sueldos_categoria</title>
+</head>
+<body>
+    <script>
+    let nombre,sueldo,categoria,hordia,hortotal=0,numdias=1,porce;    
+    nombre=prompt("Ingrese el nombre del empleado: ");
+    sueldo=prompt("Ingrese el sueldo de "+nombre+" por hora: ");        
+    categoria=prompt("Ingrese la categoria del sueldo: ");
+    switch (categoria) {
+        case 1:
+            porce=0.15;
+            sueldo=sueldo+(sueldo*porce);
+            break;
+        case 2:
+            porce=0.10;
+            sueldo=sueldo+(sueldo*porce);
+            break;
+        case 3:
+            porce=0.08;
+            sueldo=sueldo+(sueldo*porce);
+            break;
+        case 4:
+            porce=0.07;
+            sueldo=sueldo+(sueldo*porce);
+            break;            
+        default:
+            alert("No existe esa categoria");
+            break;
+    }
+    while (numdias<=5) {
+        hordia=prompt("Ingrese el # de horas trabajadas el dia "+numdias+": ");
+        numdias++;
+        hortotal=hordia+hortotal;
+    }
+    document.write("Horas trabajadas en la semana: "+hortotal+"\n");
+    document.write("\n Sueldo pagado a "+nombre+" en la semana: "+(sueldo*hortotal));
+    document.write("La categoria del sueldo es: "+categoria+" por lo que se incrementa un: "+(porce*100));
+    </script>
+</body>
+</html>
